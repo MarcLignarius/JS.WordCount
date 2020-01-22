@@ -9,14 +9,14 @@ $(function() {
     let wordArray = userInput.split(/\s+/);
     console.log("wordArray", wordArray);
     let countedWords = {};
-    for (i=0; i < wordArray.length; i++) {
-      let word = wordArray[i];
-      if (!countedWords[word]) {
-        countedWords[word] = 1;
+    wordArray.forEach(function(key) {
+      if (countedWords.hasOwnProperty(key)) {
+        countedWords[key]++;
       } else {
-        countedWords[word]++;
+        countedWords[key] = 1;
       }
-    }
+      return countedWords;
+    })
     console.log("countedWords", countedWords);
     let result = JSON.stringify(countedWords, null, 4);
     console.log("result", result);
