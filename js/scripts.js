@@ -6,7 +6,7 @@ $(function() {
       .toLowerCase()
       .replace(/[\.,-\/#!$%"\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, "");
     console.log("userInput", userInput);
-    let wordArray = userInput.split(" ");
+    let wordArray = userInput.split(/\s+/);
     console.log("wordArray", wordArray);
     let countedWords = {};
     for (i=0; i < wordArray.length; i++) {
@@ -19,6 +19,7 @@ $(function() {
     }
     console.log("countedWords", countedWords);
     let result = JSON.stringify(countedWords, null, 4);
-    console.log(result);
+    console.log("result", result);
+    $("#output").text(result);
   });
 });
