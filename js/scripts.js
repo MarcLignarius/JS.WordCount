@@ -8,7 +8,7 @@ $(function() {
     console.log("userInput", userInput);
     let wordArray = userInput.split(" ");
     console.log("wordArray", wordArray);
-    let countedWords = [];
+    let countedWords = {};
     for (i=0; i < wordArray.length; i++) {
       let word = wordArray[i];
       if (!countedWords[word]) {
@@ -17,6 +17,8 @@ $(function() {
         countedWords[word]++;
       }
     }
-    console.log(countedWords);
+    console.log("countedWords", countedWords);
+    let result = JSON.stringify(countedWords, null, 4);
+    console.log(result);
   });
 });
