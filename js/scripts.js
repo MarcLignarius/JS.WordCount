@@ -6,8 +6,7 @@ $(function() {
       .toLowerCase()
       .replace(/[\.,-\/#!$%"\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, "");
     console.log("userInput", userInput);
-    let wordArray = [];
-    wordArray.push(userInput.split(" "));
+    let wordArray = userInput.split(" ");
     console.log("wordArray", wordArray);
   });
 });
