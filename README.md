@@ -1,28 +1,24 @@
-# _{Application Name}_
+# _Word Count_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _01/24/2020_
 
 #### By _**Marc Davies**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This is a program that ets users input a block of text and returns a list of all the unique words and how many times they appeared, sorted by number and order of appearances._
 
 ## Setup/Installation Requirements
 
 * _Clone from GitHub_
 * _Open index.html_
-* _Alternatively, launch https://marclignarius.github.io/projectname_
+* _Alternatively, launch https://marclignarius.github.io/JS.WordCount_
 
 ## Specs
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| Lorem | x | true/false |
-| Lorem | x | true/false |
-| Lorem | x | true/false |
-| Lorem | x | true/false |
-| Lorem | x | true/false |
+| User enters a sentence, program returns a list of all the unique words and how many times they appeared, sorted by number and order of appearances. | and a moo moo here and a moo moo there | moo: 4, and: 2, a: 2, here: 1, there: 1 |
 
 ## Known Bugs
 
@@ -34,7 +30,7 @@ _Please contact me via <a href="https://www.linkedin.com/in/marcdaviesriot/">Lin
 
 ## Technologies Used
 
-_HTML, CSS, JS, Bootstrap, jQuery, Atom._
+_HTML, CSS, JS, Bootstrap, jQuery_
 
 ### License
 
