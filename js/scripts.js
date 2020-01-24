@@ -10,7 +10,9 @@ $(function() {
     console.log("inputArray", inputArray);
     var wordCount = countWords(inputArray);
     console.log("wordCount", wordCount);
-  })
+    var sortedCount = sortByCount(wordCount);
+    console.log("sortedCount", sortedCount);
+  });
 
   function inputToArray(userInput) {
     // split string by spaces (including spaces, tabs, and newlines)
@@ -29,6 +31,21 @@ $(function() {
       }
     });
     return wordCount;
+  }
+
+  function sortByCount(wordCount) {
+    // sort by count in descending order
+    var sortedCount = [];
+    sortedCount = Object.keys(wordCount).map(function(key) {
+      return {
+        name: key,
+        total: wordCount[key]
+      };
+    });
+    sortedCount.sort(function(a, b) {
+      return b.total - a.total;
+    });
+    return sortedCount;
   }
 });
 
