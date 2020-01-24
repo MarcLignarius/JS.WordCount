@@ -1,11 +1,14 @@
 $(function() {
-    $("#userForm").submit(function(event) {
-      event.preventDefault();
-      let userInput = $("#userInput")
-        .val()
-        .toLowerCase()
-        .replace(/[\.,-\/#!$%"\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, "");
-      console.log("userInput", userInput);
+  $("#userForm").submit(function(event) {
+    event.preventDefault();
+    let userInput = $("#userInput")
+      .val()
+      .toLowerCase()
+      .replace(/[\.,-\/#!$%"\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, "");
+    console.log("userInput", userInput);
+    let wordsArray = userInput.split(/\s+/);
+    console.log("wordsArray", wordsArray);
+    return wordsArray;
   });
 });
 
@@ -34,4 +37,3 @@ $(function() {
 //     $("#output").text(result);
 //   });
 // });
-
