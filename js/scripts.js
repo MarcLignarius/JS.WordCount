@@ -6,10 +6,15 @@ $(function() {
       .toLowerCase()
       .replace(/[\.,-\/#!$%"\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, "");
     console.log("userInput", userInput);
-    let wordsArray = userInput.split(/\s+/);
-    console.log("wordsArray", wordsArray);
-    return wordsArray;
-  });
+    var inputArray = inputToArray(userInput);
+    console.log("inputArray", inputArray);
+  })
+
+  function inputToArray(userInput) {
+    // split string by spaces (including spaces, tabs, and newlines)
+    var inputArray = userInput.split(/\s+/);
+    return inputArray;
+  }
 });
 
 // $(function() {
