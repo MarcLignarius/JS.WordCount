@@ -8,12 +8,27 @@ $(function() {
     console.log("userInput", userInput);
     var inputArray = inputToArray(userInput);
     console.log("inputArray", inputArray);
+    var wordCount = countWords(inputArray);
+    console.log("wordCount", wordCount);
   })
 
   function inputToArray(userInput) {
     // split string by spaces (including spaces, tabs, and newlines)
     var inputArray = userInput.split(/\s+/);
     return inputArray;
+  }
+
+  function countWords(inputArray) {
+    // create map for word counts
+    var wordCount = {};
+    inputArray.forEach(function(key) {
+      if (wordCount.hasOwnProperty(key)) {
+        wordCount[key]++;
+      } else {
+        wordCount[key] = 1;
+      }
+    });
+    return wordCount;
   }
 });
 
