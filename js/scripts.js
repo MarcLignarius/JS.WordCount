@@ -5,13 +5,10 @@ $(function() {
       .val()
       .toLowerCase()
       .replace(/[\.,-\/#!$%"\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, "");
-    console.log("userInput", userInput);
     var inputArray = inputToArray(userInput);
-    console.log("inputArray", inputArray);
     var wordCount = countWords(inputArray);
-    console.log("wordCount", wordCount);
     var sortedCount = sortByCount(wordCount);
-    console.log("sortedCount", sortedCount);
+    var result = displayResults(sortedCount);
   });
 
   function inputToArray(userInput) {
@@ -46,6 +43,16 @@ $(function() {
       return b.total - a.total;
     });
     return sortedCount;
+  }
+
+  function displayResults(sortedCount) {
+    var output = "<ul>";
+    sortedCount.forEach(function(word) {
+      output += "<li>" + word.name + ": " + word.total + "</li>";
+    });
+  output += "</ul>";
+  document.getElementById("output").innerHTML = output;
+  return output;
   }
 });
 
